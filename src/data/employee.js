@@ -62,11 +62,11 @@ router.post('/update', function (req, res) {
             'email': req.body.email,
             'dob': req.body.Dob,
             'city': req.body.city
-         } }, function(err,resp){
+         } }, function(err,responce){
         if(err){
-          res.send(err)
+          res.status(400).send(err)
         } else {
-          res.send(resp)
+          res.status(200).send(responce)
         }
     });
   });
